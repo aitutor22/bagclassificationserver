@@ -1,0 +1,3 @@
+2019-02-05_1.jpeg,True,
+2019-02-05_2.jpeg,True,
+2019-02-05_1.jpeg,False,chanel
