@@ -124,11 +124,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:8080',
-    'http://s3.amazonaws.com'
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'localhost:8080',
+#     'http://s3.amazonaws.com'
+# )
 
+CORS_ORIGIN_ALLOW_ALL = True  
 
 # disable authentication for drf
 REST_FRAMEWORK = {
