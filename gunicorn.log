@@ -1,0 +1,340 @@
+[2019-02-06 04:32:04 +0000] [18396] [DEBUG] Current configuration:
+  config: None
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/bagclassification
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/bagclassification/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: bagclassification.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa96fed66a8>
+  on_reload: <function OnReload.on_reload at 0x7fa96fed67b8>
+  when_ready: <function WhenReady.when_ready at 0x7fa96fed68c8>
+  pre_fork: <function Prefork.pre_fork at 0x7fa96fed69d8>
+  post_fork: <function Postfork.post_fork at 0x7fa96fed6ae8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa96fed6bf8>
+  worker_int: <function WorkerInt.worker_int at 0x7fa96fed6d08>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa96fed6e18>
+  pre_exec: <function PreExec.pre_exec at 0x7fa96fed6f28>
+  pre_request: <function PreRequest.pre_request at 0x7fa96feef0d0>
+  post_request: <function PostRequest.post_request at 0x7fa96feef158>
+  child_exit: <function ChildExit.child_exit at 0x7fa96feef268>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa96feef378>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa96feef488>
+  on_exit: <function OnExit.on_exit at 0x7fa96feef598>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-02-06 04:32:04 +0000] [18396] [INFO] Starting gunicorn 19.9.0
+[2019-02-06 04:32:04 +0000] [18396] [DEBUG] Arbiter booted
+[2019-02-06 04:32:04 +0000] [18396] [INFO] Listening at: http://127.0.0.1:8000 (18396)
+[2019-02-06 04:32:04 +0000] [18396] [INFO] Using worker: sync
+[2019-02-06 04:32:04 +0000] [18399] [INFO] Booting worker with pid: 18399
+[2019-02-06 04:32:04 +0000] [18399] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named 'bagclassification'
+[2019-02-06 04:32:04 +0000] [18399] [INFO] Worker exiting (pid: 18399)
+[2019-02-06 04:32:04 +0000] [18396] [INFO] Shutting down: Master
+[2019-02-06 04:32:04 +0000] [18396] [INFO] Reason: Worker failed to boot.
+[2019-02-06 04:33:02 +0000] [18428] [DEBUG] Current configuration:
+  config: None
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/bagclassification
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/bagclassification/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: bagclassification.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fce99d616a8>
+  on_reload: <function OnReload.on_reload at 0x7fce99d617b8>
+  when_ready: <function WhenReady.when_ready at 0x7fce99d618c8>
+  pre_fork: <function Prefork.pre_fork at 0x7fce99d619d8>
+  post_fork: <function Postfork.post_fork at 0x7fce99d61ae8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fce99d61bf8>
+  worker_int: <function WorkerInt.worker_int at 0x7fce99d61d08>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fce99d61e18>
+  pre_exec: <function PreExec.pre_exec at 0x7fce99d61f28>
+  pre_request: <function PreRequest.pre_request at 0x7fce99d7a0d0>
+  post_request: <function PostRequest.post_request at 0x7fce99d7a158>
+  child_exit: <function ChildExit.child_exit at 0x7fce99d7a268>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fce99d7a378>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fce99d7a488>
+  on_exit: <function OnExit.on_exit at 0x7fce99d7a598>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-02-06 04:33:02 +0000] [18428] [INFO] Starting gunicorn 19.9.0
+[2019-02-06 04:33:02 +0000] [18428] [DEBUG] Arbiter booted
+[2019-02-06 04:33:02 +0000] [18428] [INFO] Listening at: http://127.0.0.1:8000 (18428)
+[2019-02-06 04:33:02 +0000] [18428] [INFO] Using worker: sync
+[2019-02-06 04:33:02 +0000] [18431] [INFO] Booting worker with pid: 18431
+[2019-02-06 04:33:02 +0000] [18431] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named 'bagclassification'
+[2019-02-06 04:33:02 +0000] [18431] [INFO] Worker exiting (pid: 18431)
+[2019-02-06 04:33:02 +0000] [18428] [INFO] Shutting down: Master
+[2019-02-06 04:33:02 +0000] [18428] [INFO] Reason: Worker failed to boot.
+[2019-02-06 04:37:30 +0000] [18473] [DEBUG] Current configuration:
+  config: None
+  bind: ['127.0.0.1:8000']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/ubuntu/bagclassification
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/ubuntu/bagclassification/gunicorn.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: bagclassification.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa7e210f6a8>
+  on_reload: <function OnReload.on_reload at 0x7fa7e210f7b8>
+  when_ready: <function WhenReady.when_ready at 0x7fa7e210f8c8>
+  pre_fork: <function Prefork.pre_fork at 0x7fa7e210f9d8>
+  post_fork: <function Postfork.post_fork at 0x7fa7e210fae8>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa7e210fbf8>
+  worker_int: <function WorkerInt.worker_int at 0x7fa7e210fd08>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa7e210fe18>
+  pre_exec: <function PreExec.pre_exec at 0x7fa7e210ff28>
+  pre_request: <function PreRequest.pre_request at 0x7fa7e21280d0>
+  post_request: <function PostRequest.post_request at 0x7fa7e2128158>
+  child_exit: <function ChildExit.child_exit at 0x7fa7e2128268>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa7e2128378>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa7e2128488>
+  on_exit: <function OnExit.on_exit at 0x7fa7e2128598>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-02-06 04:37:30 +0000] [18473] [INFO] Starting gunicorn 19.9.0
+[2019-02-06 04:37:30 +0000] [18473] [DEBUG] Arbiter booted
+[2019-02-06 04:37:30 +0000] [18473] [INFO] Listening at: http://127.0.0.1:8000 (18473)
+[2019-02-06 04:37:30 +0000] [18473] [INFO] Using worker: sync
+[2019-02-06 04:37:30 +0000] [18476] [INFO] Booting worker with pid: 18476
+[2019-02-06 04:37:30 +0000] [18476] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named 'bagclassification'
+[2019-02-06 04:37:30 +0000] [18476] [INFO] Worker exiting (pid: 18476)
+[2019-02-06 04:37:30 +0000] [18477] [INFO] Booting worker with pid: 18477
+[2019-02-06 04:37:30 +0000] [18477] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/ubuntu/anaconda2/envs/cv/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named 'bagclassification'
+[2019-02-06 04:37:30 +0000] [18477] [INFO] Worker exiting (pid: 18477)
+[2019-02-06 04:37:30 +0000] [18473] [INFO] Shutting down: Master
+[2019-02-06 04:37:30 +0000] [18473] [INFO] Reason: Worker failed to boot.
